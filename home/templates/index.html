@@ -158,25 +158,45 @@
       </div>
     </section>
     <!---  Testimonials Section  --->
-    <section id="testimonials">
-      <div class="container">
-        <h3 class="title text-center">TESTIMONIALS</h3>
+        <section id="testimonials">
+          <div class="container">
+            <h3 class="title text-center">TESTIMONIALS</h3>
+          {% csrf_token %}
+          <h6 class="text-center">
+            <form method="POST" action="create/">
+                <p>
+                    <label>Введите имя</label><br>
+                    <input type="text" name="name" />
+                </p>
+                <p>
+                    <label>Введите текс</label><br>
+                    <input type="text" name="tittle" />
+                </p>
+                {% csrf_token %}
+                <input type="submit" value="Сохранить" >
+            </form>
+          </h6>
+          {% for i in comment %}
+            <div id="list-example" class="list-group" >
+                <h6 class="text-center">
+                    <a class="list-group-item list-group-item-action" href="#list-item-1">{{ i.name }}</a>
+                </h6>
+            </div>
+                <div data-spy="scroll" data-target="#list-example" data-offset="0" class="scrollspy-example">
+                    <h6 class="text-center">
+                        <a id="list-item-1">{{ i.tittle }}</a>
+                    </h6>
+                </div>
+          {% endfor %}
+
+
         <div class="row offset-1">
-          <div class="col-md-5 testimonials">
-            <p class="feedback">"Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-            </p>
-            <img src="{% static 'images/testimonials/testimonial-1.jpg' %}"  alt="">
-            <p class="user-details"><b>James</b><br>CEO at DIN</p>
+                {{ i.tittle }}
+            <p class="user-details"><b>{{ i.name }}</b>
+
           </div>
-          <div class="col-md-5 testimonials">
-            <p class="feedback"></p>
-            <img src="{% static 'images/testimonials/testimonial-3.jpg' %}"  alt="">
-            <p class="user-details"><b>William</b><br>пусто {{ people }}</p>
-          </div>
-        </div>
       </div>
+
     </section>
     <!-- Footer ------>
     <section id="footer">

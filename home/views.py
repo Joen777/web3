@@ -1,7 +1,20 @@
+from django.http import HttpResponseRedirect
 from django.shortcuts import render
 from new.models import table
+from .models import Comment
+from django.views.decorators.csrf import csrf_protect
+
+def home(request):#Вывод таблицы с базы даных
+    comment = Comment.objects.all()
+    return render(request, "index.html", {"comment": comment})
 
 
-def home(request):
-    people = table.objects.all()
-    return render(request, "index.html", {"people": people})
+
+@csrf_protect
+def create(request):
+    if request.method == "POST":
+        comment = Comment()
+        comment.name = request.POST.get("name")
+        comment.tittle = request.POST.get("tittle")
+        comment.save()
+    return HttpResponseRedirect("/")
