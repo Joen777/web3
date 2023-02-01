@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <title>LoginView</title>
+    </head>
+
+    <body>
+        <!-- form for handling user login -->
+        <form method="POST">
+            {% csrf_token %}  <!-- protection against cross-site request forgery -->
+            <!-- form variable containing the login form fields -->
+            {{ form.as_p }}
+            <!-- submit button for login form -->
+            <input type="submit" name="sumbit">
+        </form>
+    </body>
+</html>
