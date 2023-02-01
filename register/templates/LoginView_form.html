@@ -1,9 +1,7 @@
-<html>
-    <head>
-        <title>LoginView</title>
-    </head>
+{% extends "index.html" %}
 
-    <body>
+
+{% block login %}
         <!-- form for handling user login -->
         <form method="POST">
             {% csrf_token %}  <!-- protection against cross-site request forgery -->
@@ -12,5 +10,4 @@
             <!-- submit button for login form -->
             <input type="submit" name="sumbit">
         </form>
-    </body>
-</html>
+{% endblock %}

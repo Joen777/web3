@@ -33,7 +33,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link" href="#top">Додому <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="{% url 'home' %}">Додому <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#services">Сервіси</a>
@@ -65,6 +65,10 @@
       <div class="container">
         <div class="row">
           <div class="col-md-6">
+              {% block content %}
+              {% endblock %}
+            {% block login %}
+            {% endblock %}
             <p class="promo-title">Your Digital Agency</p>
             <p class="join-title">Join Us! We Will Let Grown Your Business Faster</p>
             <a href="#" class="link-play">
