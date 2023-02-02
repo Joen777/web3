@@ -20,13 +20,13 @@
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72.png">
     <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57.png">
   </head>
-  {% block donate %}
+  {% block donat %}
   {% endblock %}
   <body>
     <!-- Navbar Menu  ---->
     <section id="nav-bar">
       <nav class="navbar navbar-expand-lg navbar-light">
-         <a class="navbar-brand" href="#">
+         <a class="navbar-brand" href="">
            <img src="{% static 'images/webiz-logo.png' %}" alt="">
          </a>
          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -47,7 +47,7 @@
               <a class="nav-link" href="#testimonials">Відгуки</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{% url 'login' %}">Контакти</a>
+              <a class="nav-link" href="#">Контакти</a>
             </li>
             <li class="nav-item">
                 {% if user.is_authenticated %}
@@ -71,10 +71,10 @@
               {% endblock %}
             {% block login %}
             {% endblock %}
-            <p class="promo-title">Your Digital Agency</p>
-            <p class="join-title">Join Us! We Will Let Grown Your Business Faster</p>
-            <a href="#" class="link-play">
-              <img src="{% static 'svg/play.svg' %}" alt="" class="play-btn">Watch Tutorials
+            <p class="promo-title">ПРИВІТ</p>
+            <p class="join-title">Буду вдячний, якщо ти підтримаєш мене </p>
+            <a href="https://send.monobank.ua/jar/2HF7AKq42C" class="link-play">
+              <img src="{% static 'svg/play.svg' %}" alt="" class="play-btn">ПІДТРИМАТИ
             </a>
           </div>
             <div class="col-md-6">
@@ -89,7 +89,7 @@
     <!--- Services ---->
     <section id="services">
       <div class="container text-center">
-        <h3 class="title text-center">SERVICES</h3>
+        <h3 class="title text-center">СЕРВІСИ</h3>
         <div class="row text-center">
           <div class="col-md-4 services">
             <img src="{% static 'svg/undraw_website_setup_5hr2.svg' %}" class="service-img"   alt="">
@@ -140,17 +140,19 @@
     <!--- About Section ------>
     <section id="about">
       <div class="container">
-        <h3 class="title text-center">ABOUT US</h3>
+        <h3 class="title text-center">ПРО МЕНЕ</h3>
         <div class="row">
           <div class="col-md-6 about">
-            <p class="about-title">Odio sed id eos et laboriosam consequatur eos earum soluta.</p>
+            <p class="about-title">Мене звати Макс і я програміст початківець. Що вивчаю?</p>
             <ul>
-              <li>Sint aliquam consequatur ex ex labore.</li>
-              <li>Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-              <li>Aspernatur consectetur omnis numquam quaerat.</li>
-              <li>Et vel ut quidem alias veritatis repudiandae ut fugit.</li>
-              <li>Fugit ut maxime incidunt accusantium totam repellendus eum error. </li>
-              <li>Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+              <li>- Aiogram (Створення телеграмм ботiв)</li>
+              <li>- Django (Ствоерння Backend сайтiв)</li>
+              <li>- Flask (Створення Backend сайтiв) </li>
+              <li>- MySql </li>
+                <a href="https://github.com/Joen777">
+                    <li>- GitHub </li>
+                </a>
+              <li>- Docker</li>
             </ul>
           </div>
             <div class="col-md-6">
@@ -162,20 +164,20 @@
     <!---  Testimonials Section  --->
         <section id="testimonials">
           <div class="container">
-            <h3 class="title text-center">TESTIMONIALS</h3>
+            <h3 class="text-center">КОМЕНТАРІ</h3>
           {% csrf_token %}
           <h6 class="text-center">
             <form method="POST" action="create/">
                 <p>
-                    <label>Введите имя</label><br>
+                    <label>Введіть ім'я</label><br>
                     <input type="text" name="name" />
                 </p>
                 <p>
-                    <label>Введите текс</label><br>
+                    <label>Введіть текст</label><br>
                     <input type="text" name="tittle" />
                 </p>
                 {% csrf_token %}
-                <input type="submit" value="Сохранить" >
+                <input type="submit" value="Надіслати" >
             </form>
           </h6>
           {% for i in comment %}
@@ -206,24 +208,23 @@
           <div class="row">
             <div class="col-md-4 footer-box">
               <img src="{% static 'images/webiz-logo.png' %}" alt="">
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              <p>
               </p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <p></p>
             </div>
             <div class="col-md-4 footer-box">
-                <p id="contact"><b>OUR OFFICE</b></p>
-                <p><i class="fa fa-map-marker"></i>Holloway Road, London</p>
-                <p><i class="fa fa-phone"></i>+44 074 675 86 965</p>
-                <p><i class="fa fa-envelope-o"></i>info@examle.com</p>
+                <p id="contact"><b>Контакти</b></p>
+                <p><i class="fa fa-map-marker"></i>Україна, Одеса</p>
+                <p><i class="fa fa-phone"></i>+38(098) 020 47 88</p>
+                <p><i class="fa fa-envelope-o"></i>сайт</p>
             </div>
             <div class="col-md-4 footer-box">
-                <p><b>SUBSCRIBE NEWSLETTER</b></p>
+                <p><b>Зв'язатися зі мною</b></p>
                 <input type="email"class="form-control" placeholder="Your Email">
-                <button type="button"class="btn btn-primary" name="button">Subscribe</button>
+                <button type="button"class="btn btn-primary" name="button">НАДІСЛАТИ</button>
 
                 <div id="social">
-                    <p>Find Us On Social Media</p>
+                    <p>Мої соціальні мережі</p>
                        <div class="social-icons">
                           <a href="#" class="svg-icons"><img src="{% static 'svg/facebook-logo.svg' %}" alt=""></a>
                           <a href="#" class="svg-icons"><img src="{% static 'svg/instagram_.svg' %}" alt=""></a>
@@ -231,16 +232,6 @@
                           <a href="#" class="svg-icons"><img src="{% static 'svg/whatsapp.svg' %}" alt=""></a>
                        </div>
                 </div>
-            </div>
-            <div class="col-md-6 ">
-              <p class="copyright">Copyright © 2019. All rights reserved | Designed by <a href="https://www.salvatoremandis.it/index-eng.html">Salvatore Mandis</a></p>
-            </div>
-            <div class="col-md-6 text-right">
-            <p class="copyright">
-              <a href="#">Privacy Policy</a>
-              <a href="#">Cookie Policy</a>
-              <a href="#">Terms & Conditions</a>
-            </p>
             </div>
           </div>
           <br>

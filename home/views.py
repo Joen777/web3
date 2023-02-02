@@ -17,3 +17,4 @@ def create(request):
         comment.tittle = request.POST.get("tittle")
         comment.save()
     return HttpResponseRedirect("/")
+
