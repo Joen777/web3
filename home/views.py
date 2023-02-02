@@ -1,6 +1,5 @@
 from django.http import HttpResponseRedirect
 from django.shortcuts import render
-from new.models import table
 from .models import Comment
 from django.views.decorators.csrf import csrf_protect
 

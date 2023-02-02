@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'home',
     'crispy_forms',
     'register',
-    'new',
+
 
 ]
 
