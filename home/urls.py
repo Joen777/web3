@@ -11,5 +11,6 @@ urlpatterns = [
     path('login/', AdminLogin.as_view(), name="login"),
     path('exit/', authViews.LogoutView.as_view(), name='exit'),
     path("create/", views.create),
+    path('email/', views.Feet_mail),
 
 ]

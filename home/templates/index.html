@@ -27,7 +27,7 @@
     <section id="nav-bar">
       <nav class="navbar navbar-expand-lg navbar-light">
          <a class="navbar-brand" href="">
-           <img src="{% static 'images/webiz-logo.png' %}" alt="">
+           <img src="" alt="">
          </a>
          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
            <i class="fa fa-bars"></i>
@@ -167,7 +167,7 @@
             <h3 class="text-center">КОМЕНТАРІ</h3>
           {% csrf_token %}
           <h6 class="text-center">
-            <form method="POST" action="create/">
+            <form method="POST"class="btn btn-primary" action="create/">
                 <p>
                     <label>Введіть ім'я</label><br>
                     <input type="text" name="name" />
@@ -177,7 +177,7 @@
                     <input type="text" name="tittle" />
                 </p>
                 {% csrf_token %}
-                <input type="submit" value="Надіслати" >
+                <input type="submit" value="Надіслати" class="btn btn-primary" >
             </form>
           </h6>
           {% for i in comment %}
@@ -207,7 +207,7 @@
         <div class="container">
           <div class="row">
             <div class="col-md-4 footer-box">
-              <img src="{% static 'images/webiz-logo.png' %}" alt="">
+              <img src="" alt="">
               <p>
               </p>
               <p></p>
@@ -220,8 +220,15 @@
             </div>
             <div class="col-md-4 footer-box">
                 <p><b>Зв'язатися зі мною</b></p>
-                <input type="email"class="form-control" placeholder="Your Email">
-                <button type="button"class="btn btn-primary" name="button">НАДІСЛАТИ</button>
+                {% csrf_token %}
+                    {% csrf_token %}
+                    <form method="POST" action="email/">
+                        {% csrf_token %}
+                        <input type="text" name="feed_email" class="form-control" placeholder="Номер телефона,Email">
+                        {% csrf_token %}
+                        <input type="submit" class="btn btn-primary" value="Надіслати">
+                    </form>
+
 
                 <div id="social">
                     <p>Мої соціальні мережі</p>
