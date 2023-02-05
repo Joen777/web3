@@ -19,7 +19,7 @@ def create(request): #коментарии
     return HttpResponseRedirect("/")
 
 @csrf_protect
-def Feet_mail(request):
+def Feet_mail(request):#Обратный звязок
     if request.method == 'POST':
         mail = Feedback()
         mail.feed_email = request.POST.get("feed_email")

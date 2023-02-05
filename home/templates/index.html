@@ -71,7 +71,7 @@
               {% endblock %}
             {% block login %}
             {% endblock %}
-            <p class="promo-title">ПРИВІТ</p>
+            <p class="promo-title">Привiт</p>
             <p class="join-title">Буду вдячний, якщо ти підтримаєш мене </p>
             <a href="https://send.monobank.ua/jar/2HF7AKq42C" class="link-play">
               <img src="{% static 'svg/play.svg' %}" alt="" class="play-btn">ПІДТРИМАТИ
@@ -89,45 +89,45 @@
     <!--- Services ---->
     <section id="services">
       <div class="container text-center">
-        <h3 class="title text-center">СЕРВІСИ</h3>
+        <h3 class="title text-center">Сeрвiси</h3>
         <div class="row text-center">
           <div class="col-md-4 services">
-            <img src="{% static 'svg/undraw_website_setup_5hr2.svg' %}" class="service-img"   alt="">
+            <img src="{% static 'svg/coding.svg' %}" class="service-img"   alt="">
             <h4>Landing Page Design</h4>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
               sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
           </div>
           <div class="col-md-4 services">
-            <img src="{% static 'svg/branding.svg' %}" class="service-img"   alt="">
+            <img src="{% static 'svg/mysql.svg' %}" class="service-img"   alt="">
             <h4>Online  Branding</h4>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
               sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
           </div>
           <div class="col-md-4 services">
-            <img src="{% static 'svg/ads.svg' %}" class="service-img"   alt="">
+            <img src="{% static 'svg/docker.svg' %}" class="service-img"   alt="">
             <h4>Google Ads</h4>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
               sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
           </div>
           <div class="col-md-4 services">
-            <img src="{% static 'svg/undraw_Savings_dwkw.svg' %}" class="service-img"   alt="">
+            <img src="{% static 'svg/flask.svg' %}" class="service-img"   alt="">
             <h4>PPC</h4>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
               sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
           </div>
           <div class="col-md-4 services">
-            <img src="{% static 'svg/social.svg' %}" class="service-img"   alt="">
+            <img src="{% static 'svg/python.svg' %}" class="service-img"   alt="">
             <h4>Social Media</h4>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
               sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
           </div>
           <div class="col-md-4 services">
-          <img src="{% static 'svg/undraw_wireframing_nxyi.svg' %}" class="service-img"   alt="">
+          <img src="{% static 'svg/django.svg' %}" class="service-img"   alt="">
             <h4>SEO</h4>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
               sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -140,11 +140,12 @@
     <!--- About Section ------>
     <section id="about">
       <div class="container">
-        <h3 class="title text-center">ПРО МЕНЕ</h3>
+        <h3 class="title text-center">Про мене</h3>
         <div class="row">
           <div class="col-md-6 about">
             <p class="about-title">Мене звати Макс і я програміст початківець. Що вивчаю?</p>
             <ul>
+              <li>- Python</li>
               <li>- Aiogram (Створення телеграмм ботiв)</li>
               <li>- Django (Ствоерння Backend сайтiв)</li>
               <li>- Flask (Створення Backend сайтiв) </li>
@@ -153,6 +154,7 @@
                     <li>- GitHub </li>
                 </a>
               <li>- Docker</li>
+
             </ul>
           </div>
             <div class="col-md-6">
@@ -164,7 +166,7 @@
     <!---  Testimonials Section  --->
         <section id="testimonials">
           <div class="container">
-            <h3 class="text-center">КОМЕНТАРІ</h3>
+            <h3 class="text-center">Вiдгук</h3>
           {% csrf_token %}
           <h6 class="text-center">
             <form method="POST"class="btn btn-primary" action="create/">
